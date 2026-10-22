@@ -1,1 +1,0 @@
-# sobsam.soft

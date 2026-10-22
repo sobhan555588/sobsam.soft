@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Basic Programming Apps For Linux</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #ffffff;
+            margin-bottom: 12px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        p.subtitle {
+            font-size: 14px;
+            color: #a0a0c0;
+            margin-bottom: 30px;
+        }
+
+        .g-recaptcha {
+            display: flex;
+            justify-content: center;
+        }
+
+        #status {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #a0a0c0;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Download Basic Programming Apps For Linux</h1>
+    <p class="subtitle">Please sign up, you are not a robot</p>
+
+    <!-- Just the reCAPTCHA widget — no form, no fields, no button -->
+    <div class="g-recaptcha"
+         data-sitekey=88"
+         data-callback="onRecaptchaSuccess"
+         data-error-callback="onRecaptchaError">
+    </div>
+
+    <p id="status">Verifying... Please wait.</p>
+
+    <script>
+        // بعد از حل reCAPTCHA، کاربر به صفحه مورد نظر هدایت می‌شود
+        function onRecaptchaSuccess(token) {
+            document.getElementById('status').style.display = 'block';
+            document.getElementById('status').textContent = 'Verified! Redirecting...';
+
+            // اینجا لینک مقصد را بگذارید
+            window.location.href = 'https://yoursite.com/download';
+        }
+
+        // اگر reCAPTCHA خطا داد
+        function onRecaptchaError() {
+            document.getElementById('status').style.display = 'block';
+            document.getElementById('status').textContent = 'Verification failed. Please try again.';
+        }
+    </script>
+
+</body>
+</html>
